@@ -1,4 +1,7 @@
 
+
+const fastify = require ('fastify');
+
 const route = {
     url: '/products',
     method: 'GET',
@@ -7,3 +10,5 @@ const route = {
     }
 }
 
+
+module.exports = route;
