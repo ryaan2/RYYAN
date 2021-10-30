@@ -1,0 +1,49 @@
+
+
+const fastify = require ('fastify');
+
+
+const routes = [
+    {
+        url: '/products',
+        method: 'GET',
+        handler: (request, reply) => {
+            reply.send('screating product');
+        },
+    },
+
+    {
+        url: '/products/:id',
+        method: 'POST',
+        handler: (request, reply) => {
+            reply.send('updating a product');
+        },
+    },
+
+    {
+        url: '/products/:id',
+        method: 'PUT',
+        handler: (request, reply) => {
+            reply.send('products ctm');
+        },
+    },
+
+    {
+        url: '/products/:id',
+        method: 'DELETE',
+        handler: (request, reply) => {
+            reply.delete('products ctm');
+        },
+    },
+
+];
+
+
+module.exports = routes; // EXPORTAMOS
+const productRoutes = require("./routes/products.router"); IMPORTAMOS
+
+productRoutes.forEach((route) => {
+    fastify.route(route);
+})                   // EJECUTAMOS
+
+
