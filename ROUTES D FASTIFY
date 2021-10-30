@@ -1,0 +1,9 @@
+
+const route = {
+    url: '/products',
+    method: 'GET',
+    handler: (request, reply) => {
+        reply.send('products ctm');
+    }
+}
+
