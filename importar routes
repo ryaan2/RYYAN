@@ -1,0 +1,3 @@
+module.exports = route; // ESPORTAR
+const productRoute = require("./routes/products.router"); // IMPORTAR 
+fastify.route(productRoute); // EJECUTAR
